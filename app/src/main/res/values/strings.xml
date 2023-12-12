@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Twisto Widget</string>
+    <string name="search_bar_description">Enter a stop</string>
 </resources>

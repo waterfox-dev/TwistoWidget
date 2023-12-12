@@ -1,6 +1,6 @@
 package com.waterfox.twistowidget.apisearcher.result
 
-data class ResultX(
+data class StopSpecific(
     val location_type: String,
     val parent_station: Any,
     val stop_code: Any,

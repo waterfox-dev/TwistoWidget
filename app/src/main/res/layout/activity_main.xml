@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/tw_grey">
 
-    <TimePicker
+    <SearchView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-41dp"
-        tools:layout_editor_absoluteY="80dp" />
-
+        android:layout_height="50dp"
+        android:background="@color/tw_sand"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/mainActivitySearchBar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
