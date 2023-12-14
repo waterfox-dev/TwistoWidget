@@ -45,10 +45,15 @@ class ResultActivity : AppCompatActivity()
                 if (response.isSuccessful) {
                     val stopResult = response.body()
                     if (stopResult != null) {
-                        for (r: StopSpecific in stopResult.results) {
-                            val b = Button(this@ResultActivity)
-                            b.text = r.stop_name
-                            linearLayoutResults.addView(b)
+                        for (r: StopSpecific in stopResult.results)
+                        {
+                            if(!stopNames.contains(r.stop_name))
+                            {
+                                val b = Button(this@ResultActivity)
+                                b.text = r.stop_name
+                                linearLayoutResults.addView(b)
+                                stopNames.add(r.stop_name)
+                            }
                         }
                     }
                 } else {
@@ -59,7 +64,8 @@ class ResultActivity : AppCompatActivity()
                 }
             }
 
-            override fun onFailure(call: Call<StopResult>, t: Throwable) {
+            override fun onFailure(call: Call<StopResult>, t: Throwable)
+            {
                 // Handle failure if needed
             }
         })
@@ -69,6 +75,7 @@ class ResultActivity : AppCompatActivity()
         this.resultList = findViewById<ScrollView>(R.id.result_scroll_view)
         this.stopNames = ArrayList()
         this.linearLayoutResults = findViewById(R.id.linear_layout_results)
+        this.stopNames = ArrayList<String>();
     }
 
 }
