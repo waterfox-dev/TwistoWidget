@@ -8,9 +8,17 @@
     android:background="@color/tw_grey">
 
     <SearchView
-        android:layout_width="match_parent"
+        android:id="@+id/mainActivitySearchBar"
+        android:layout_width="360dp"
         android:layout_height="50dp"
-        android:background="@color/tw_sand"
-        tools:ignore="MissingConstraints"
-        android:id="@+id/mainActivitySearchBar"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_search_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
